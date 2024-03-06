@@ -8,24 +8,24 @@ This project aims to create a model that accurately predicts house prices based 
 
 The dataset used is named "Housing.csv". It contains information about houses, including features such as:
 
-Number of bedrooms,
-Number of bathrooms,
-Area (square feet),
-Furnishing status,
-Air conditioning,
-Number of stories,
-Parking availability,
-And more
+```Number of bedrooms```,
+```Number of bathrooms```,
+```Area```,
+```Furnishing status```,
+```Air conditioning```,
+```Number of stories```,
+```Parking availability```,
+and more
 
 # Steps Involved:
 
 ### 1. Import Libraries:
 
-pandas for data manipulation
-numpy for numerical operations
-matplotlib and seaborn for visualizations
-sklearn for machine learning models and evaluation metrics
-catboost, lightgbm, and xgboost for additional regression algorithms
+- ```pandas``` for data manipulation
+- ```numpy``` for numerical operations
+- ```matplotlib``` and ```seaborn``` for visualizations
+- ```sklearn``` for machine learning models and evaluation metrics
+- ```catboost```, ```lightgbm```, and ```xgboost``` for additional regression algorithms
 
 ``` bash
 import pandas as pd
@@ -60,8 +60,8 @@ df = pd.read_csv("Housing.csv")
 
 ### 3. Exploratory Data Analysis (EDA):
 
-Create bar plots, box plots, distribution plots, scatter plots, and pair plots to visualize relationships between features and distribution of data.
-Identify and handle outliers in price and area using IQR (Interquartile Range) method.
+- Create bar plots, box plots, distribution plots, scatter plots, and pair plots to visualize relationships between features and distribution of data.
+- Identify and handle outliers in price and area using IQR (Interquartile Range) method.
 
 ``` bash
 # Bar plot
@@ -148,7 +148,7 @@ sns.pairplot(df, hue="furnishingstatus")
 
 ### 4. Feature Engineering:
 
-Create dummy variables for categorical features (e.g., furnishingstatus, airconditioning) to make them suitable for numerical modeling.
+Create dummy variables for categorical features to make them suitable for numerical modeling.
 
 ``` bash
 # Feature engineering
@@ -161,8 +161,8 @@ data.drop(['furnishingstatus', 'mainroad', 'guestroom', 'basement',
 
 ### 5. Data Splitting:
 
-Split the data into features (X) and target variable (y, price).
-Further split X and y into training and testing sets (70% for training, 30% for testing).
+- Split the data into features ```X``` and target variable ```y```.
+- Further split ```X``` and ```y``` into training and testing sets (70% for training, 30% for testing).
 
 ``` bash
 X = data.drop(['price'], axis=1)
@@ -172,7 +172,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 ### 6. Feature Scaling:
 
-Scale the features using MinMaxScaler to normalize their values for better model performance.
+Scale the features using ```MinMaxScaler``` to normalize their values for better model performance.
 
 ``` bash
 scaler = MinMaxScaler()
@@ -184,14 +184,14 @@ X_test_scaled = scaler.transform(X_test)
 ### 7. Model Training:
 
 Train various regression models, including:
-Random Forest Regressor
-Gradient Boost Regressor
-XGBoost Regressor
-Support Vector Regressor
-Lasso Regression
-Ridge Regression
-LGBM Regressor
-CatBoost Regressor
+- ```Random Forest Regressor```
+- ```Gradient Boost Regressor```
+- ```XGBoost Regressor```
+- ```Support Vector Regressor```
+- ```Lasso Regression```
+- ```Ridge Regression```
+- ```LGBM Regressor```
+- ```CatBoost Regressor```
 
 ``` bash
 model = {
@@ -215,10 +215,10 @@ for name, model in model.items():
 
 ### 8. Model Evaluation:
 
-Evaluate each model's performance using:
-Mean Squared Error (MSE)
-R-squared (R2) score
-Visualize the Actual vs. Predicted values and residuals for each model to assess their fit.
+- Evaluate each model's performance using:
+  - Mean Squared Error (MSE)
+  - R-squared (R2) score
+  - Visualize the Actual vs. Predicted values and residuals for each model to assess their fit.
 
 ``` bash
 acc = {}
