@@ -1,8 +1,8 @@
-# House Price Prediction with Machine Learning
+# House Price Prediction
 
 This project aims to create a model that accurately predicts house prices based on various features. It involves data exploration, preprocessing, feature engineering, model training, and evaluation.
 
-![18](https://github.com/tuanng1102/house-price-prediction/assets/147653892/0ff42cf0-6629-47ba-8524-b9501886a666)
+![house-price](https://github.com/user-attachments/assets/5188f109-3974-47a3-ab7c-bf3a04a70fea)
 
 # Dataset:
 
